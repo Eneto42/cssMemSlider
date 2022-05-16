@@ -113,3 +113,14 @@ input[name="r"] {
     /* visibility: visible; */
     opacity: 100;
 }
+
+@media (min-width: 1200px) {
+    .nav {
+        bottom: 16px;
+        transform: translateX(280%);
+    }
+
+    .slide img {
+        margin-bottom: 50px;
+    }
+}
