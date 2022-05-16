@@ -77,3 +77,39 @@ input[name="r"] {
     color: #fff;
     
 }
+
+#r0:checked ~ .sl {
+    margin-left: 0;
+}
+
+#r0:checked ~ .s0 {
+    /* visibility: visible; */
+    opacity: 100;
+}
+
+#r1:checked ~ .sl {
+    margin-left: -25%;
+}
+
+#r1:checked ~ .s1 {
+    /* visibility: visible; */
+    opacity: 100;
+}
+
+#r2:checked ~ .sl {
+    margin-left: -50%;
+}
+
+#r2:checked ~ .s2 {
+    /* visibility: visible; */
+    opacity: 100;
+}
+
+#r3:checked ~ .sl {
+    margin-left: -75%;
+}
+
+#r3:checked ~ .s3 {
+    /* visibility: visible; */
+    opacity: 100;
+}
