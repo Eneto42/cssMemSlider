@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #282828;
+}
+
+.canvas {
+    max-width: 1000px;
+    min-width: 320px;
+    width: 90%;
+    overflow: hidden;
+}
+
+.align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    display: flex;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+}
+
+.bs {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: #ddd;
+    opacity: .7;
+    transition: all .5s ease;
+    border: 2px solid;
+    border-color: #ddd;
+}
+
+.bar:hover .bs {
+    background-color: #555;
+    border-color: #fff;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all 1s ease;
+}
+
+.slide img {
+    margin-bottom: 90px;
+    width: 100%;
+}
+
+.sign {
+    position: absolute;
+    bottom: 16px;
+    left: 10px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    color: #fff;
+    
+}
+
+#r0:checked ~ .nav #b0:hover .bs ,
+#r1:checked ~ .nav #b1:hover .bs ,
+#r2:checked ~ .nav #b2:hover .bs ,
+#r3:checked ~ .nav #b3:hover .bs 
+{
+    border-color: #ddd;
+}
+
+#r0:checked ~ .nav #b0 .bs ,
+#r1:checked ~ .nav #b1 .bs ,
+#r2:checked ~ .nav #b2 .bs ,
+#r3:checked ~ .nav #b3 .bs 
+{
+    background-color: #555;
+    border-color: #555;
+}
+
+#r0:checked ~ .slides .sl {margin-left: 0;}
+
+#r0:checked ~ .slides .s0 ,
+#r1:checked ~ .slides .s1 ,
+#r2:checked ~ .slides .s2 ,
+#r3:checked ~ .slides .s3 
+{
+    opacity: 100;
+}
+
+#r1:checked ~ .slides .sl {margin-left: -25%;}
+
+#r2:checked ~ .slides .sl {margin-left: -50%;}
+
+#r3:checked ~ .slides .sl {margin-left: -75%;}
+
+@media (min-width: 1200px) {
+    .nav {
+        bottom: 12px;
+        transform: translateX(280%);
+    }
+
+    .slide img {
+        margin-bottom: 50px;
+    }
+}
